@@ -1,19 +1,30 @@
 package com.foodapp.order.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "orders")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Order {
 
-    @Id
-    private Integer orderId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-generates the ID
+  private Integer orderId;
 
-    private String orderName;
+  private Integer customerId;
+
+  private String orderName;
+
+  private Integer quantity;
+
+  public Order(Integer customerId, String itemName, int quantity) {
+    this.customerId = customerId;
+    this.orderName = itemName;
+    this.quantity = quantity;
+  }
 }
