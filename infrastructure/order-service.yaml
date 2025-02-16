@@ -30,8 +30,8 @@ metadata:
 spec:
   selector:
     app: order-service
-  type: ClusterIP    # Exposes the service externally
+  type: LoadBalancer    # Exposes the service externally
   ports:
     - protocol: TCP
-      port: 80         # Exposed port outside the cluster
+      port: 81         # Exposed port outside the cluster
       targetPort: 8080 # Port inside the container
