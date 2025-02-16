@@ -6,7 +6,7 @@ http://localhost:81/h2-console/     (When running as a service inside container 
 jdbc:h2:mem:orderdb
 
 # Swagger 
-http://localhost:8080/swagger-ui/index.html 
+http://localhost:8080/swagger-ui/index.html \
 http://localhost:81/swagger-ui/index.html  (When running as a service inside container use )
 
 # Building Docker Image
