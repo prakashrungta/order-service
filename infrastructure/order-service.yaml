@@ -22,6 +22,8 @@ spec:
           env:
             - name: SERVER_PORT
               value: "8080"
+            - name: JAEGER_URL
+              value: "http://jaeger:4318/v1/traces"
 ---
 apiVersion: v1
 kind: Service
